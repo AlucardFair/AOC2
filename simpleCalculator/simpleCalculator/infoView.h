@@ -15,4 +15,6 @@
     IBOutlet UIButton *backButton;
 }
 
+-(IBAction)onBack:(id)sender;
+
 @end

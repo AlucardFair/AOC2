@@ -29,7 +29,12 @@
 
 -(IBAction)onClick:(id)sender
 {
-    NSLog(@"Info Button Clicked");
+    infoView *infoController = [[infoView alloc] initWithNibName:@"infoView" bundle:nil];
+    if (infoController != nil)
+    {
+        NSLog(@"Info Button Clicked");
+        [self presentViewController:infoController animated:true completion:nil];
+    }
 }
 
 @end

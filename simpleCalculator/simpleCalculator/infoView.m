@@ -35,4 +35,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(IBAction)onBack:(id)sender
+{
+    NSLog(@"Back Button Clicked");
+    [self dismissViewControllerAnimated:true completion:nil];
+}
+
 @end
