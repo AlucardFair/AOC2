@@ -27,4 +27,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(IBAction)onClick:(id)sender
+{
+    NSLog(@"Info Button Clicked");
+}
+
 @end
