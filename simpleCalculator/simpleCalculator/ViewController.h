@@ -37,4 +37,6 @@
     IBOutlet UISegmentedControl *backgroundChanger;
 }
 
+-(IBAction)onClick:(id)sender;
+
 @end

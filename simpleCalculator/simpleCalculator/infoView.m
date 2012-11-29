@@ -35,9 +35,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+// IBAction to initialize infoView and display it //
 -(IBAction)onBack:(id)sender
 {
     NSLog(@"Back Button Clicked");
+    // Dismiss infoView when Back button is pushed //
+    // dismissModalViewController is depreciated - now using dismissViewController //
     [self dismissViewControllerAnimated:true completion:nil];
 }
 
