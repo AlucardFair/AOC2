@@ -41,4 +41,47 @@
     }
 }
 
+///// NOT WORKING AT THIS MOMENT /////
+
+// IBAction to cast UISegmentedControl and change background depending on selection made //
+-(IBAction)onChange:(id)sender
+{
+    if (backgroundChanger != nil)
+    {
+        // Capture the selected index value //
+        int selectedIndex = backgroundChanger.selectedSegmentIndex;
+        NSLog(@"Selected Index = %d", selectedIndex);
+        
+        if (selectedIndex == 0)
+        {
+            // Change background to white //
+            self.view.backgroundColor = [UIColor whiteColor];
+        }
+        else if (selectedIndex == 1)
+        {
+            // Change background to blue //
+            self.view.backgroundColor = [UIColor blueColor];
+        }
+        else if (selectedIndex == 2)
+        {
+            // Change background to green //
+            self.view.backgroundColor = [UIColor greenColor];
+        }
+        else
+        {
+            // Alert User that an error has occured //
+        }
+    }
+}
+
+-(IBAction)onSwitched:(id)sender
+{
+    UISwitch *calcOnOffSwitch = (UISwitch*)sender;
+    
+    if (calcOnOffSwitch != nil);
+    {
+        NSLog(@"Switch is setting up.");
+    }
+}
+
 @end

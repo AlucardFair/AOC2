@@ -82,6 +82,7 @@
 						<string key="NSFrame">{{20, 485}, {280, 44}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -582,14 +583,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">backgroundChanger</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="196048503"/>
-					</object>
-					<int key="connectionID">133</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">buttonEight</string>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="400853651"/>
@@ -670,14 +663,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">calcOnOffSwitch</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="866040023"/>
-					</object>
-					<int key="connectionID">144</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">calcText</string>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="400660045"/>
@@ -709,6 +694,23 @@
 					<int key="connectionID">148</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">backgroundChanger</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="196048503"/>
+					</object>
+					<int key="connectionID">325</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">onChange:</string>
+						<reference key="source" ref="196048503"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">13</int>
+					</object>
+					<int key="connectionID">324</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">onClick:</string>
 						<reference key="source" ref="134505748"/>
@@ -716,6 +718,15 @@
 						<int key="IBEventType">7</int>
 					</object>
 					<int key="connectionID">149</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">onSwitched:</string>
+						<reference key="source" ref="866040023"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">13</int>
+					</object>
+					<int key="connectionID">327</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -2539,7 +2550,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">319</int>
+			<int key="maxID">327</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -2554,17 +2565,25 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">ViewController</string>
 					<string key="superclassName">UIViewController</string>
-					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">onClick:</string>
-						<string key="NS.object.0">id</string>
-					</object>
-					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">onClick:</string>
-						<object class="IBActionInfo" key="NS.object.0">
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="onChange:">id</string>
+						<string key="onClick:">id</string>
+						<string key="onSwitched:">id</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="onChange:">
+							<string key="name">onChange:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="onClick:">
 							<string key="name">onClick:</string>
 							<string key="candidateClassName">id</string>
 						</object>
-					</object>
+						<object class="IBActionInfo" key="onSwitched:">
+							<string key="name">onSwitched:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="addButton">UIButton</string>
 						<string key="backgroundChanger">UISegmentedControl</string>
@@ -2578,7 +2597,6 @@
 						<string key="buttonThree">UIButton</string>
 						<string key="buttonTwo">UIButton</string>
 						<string key="buttonZero">UIButton</string>
-						<string key="calcOnOffSwitch">UISwitch</string>
 						<string key="calcText">UITextField</string>
 						<string key="clearButton">UIButton</string>
 						<string key="equalsButton">UIButton</string>
@@ -2632,10 +2650,6 @@
 						<object class="IBToOneOutletInfo" key="buttonZero">
 							<string key="name">buttonZero</string>
 							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="calcOnOffSwitch">
-							<string key="name">calcOnOffSwitch</string>
-							<string key="candidateClassName">UISwitch</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="calcText">
 							<string key="name">calcText</string>

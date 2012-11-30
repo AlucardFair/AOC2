@@ -15,8 +15,6 @@
     IBOutlet UIButton *infoButton;
     // Text Field //
     IBOutlet UITextField *calcText;
-    // Switch //
-    IBOutlet UISwitch *calcOnOffSwitch;
     // Buttons for Numbers //
     IBOutlet UIButton *buttonOne;
     IBOutlet UIButton *buttonTwo;
@@ -38,5 +36,7 @@
 }
 
 -(IBAction)onClick:(id)sender;
+-(IBAction)onChange:(id)sender;
+-(IBAction)onSwitched:(id)sender;
 
 @end
